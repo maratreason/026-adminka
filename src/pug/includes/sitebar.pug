@@ -1,0 +1,27 @@
+- var NavItems = [{'url': '/','title':'Главная', 'icon':'images/icons/sitebar/home.svg', 'active': true},{'url': 'ankety.html','title':'Анкеты', 'icon':'images/icons/sitebar/anketa.svg'},{'url': 'users.html','title':'Пользователи', 'icon':'images/icons/sitebar/users.svg'},{'url': 'customers.html','title':'Заказчики', 'icon':'images/icons/sitebar/clients.svg'},{'url': 'research.html','title':'Исследования', 'icon':'images/icons/sitebar/learn.svg'},{'url': '/','title':'Сообщения', 'icon':'images/icons/sitebar/messages.svg', 'messages': 30},{'url': '/','title':'Справочники', 'icon':'images/icons/sitebar/infos.svg'},{'url': '/','title':'Аналитики', 'icon':'images/icons/sitebar/analytics.svg'},]
+.sitebar
+    a.sitebar__logo(href="/") Logo
+    ul.sitebar__list
+        each page,i in NavItems
+            li.sitebar__item
+                a.sitebar__link(href=page.url class=page.active ? "is--active" : "")
+                    img(src=page.icon, alt=page.title)
+                    span= page.title
+                    if page.messages
+                        span.sitebar__number= page.messages
+                    else
+                        span.sitebar__chevron
+                            img(src="images/icons/sitebar/chevron-right.svg", alt="")
+
+    ul.sitebar__list.sitebar__list-bottom
+        li.sitebar__item
+            span Быстрый доступ
+        li.sitebar__item.sitebar__item-cheeps
+            span.sitebar__item-cheep.cheep.cheep-primary Врачи
+            span.sitebar__item-cheep.cheep-primary Черновики
+
+        li.sitebar__item.sitebar__item-exit
+            a.sitebar__link(href="#") 
+                img(src="images/icons/sitebar/exit.svg", alt="")
+                span Выйти
+        

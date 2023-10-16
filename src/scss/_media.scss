@@ -1,0 +1,56 @@
+@media screen and (max-width: 1400px) {
+    .header {
+        &__bottom {
+            .container {
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    .header {
+        &__bottom-list {
+            white-space: nowrap;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            touch-action: manipulation;
+            overscroll-behavior: contain;
+        }
+        &__bottom {
+            .container {
+                width: 100%;
+                padding: 0 1.5rem;
+                justify-content: flex-start;
+            }
+        }
+    }
+    .section__info-bg {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        top: -87rem;
+    }
+    .section__info-content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        &__bottom-list {
+            // width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --fs-1: 5.6rem;
+    }
+
+}
+

@@ -1,0 +1,136 @@
+extends pug/base
+
+append content
+    .top
+        include pug/includes/sitebar
+        include pug/includes/header
+
+    main
+        .container
+            .section
+                ul.index-block__list
+                    li.index-block__item
+                        img.index-block__img(src="images/icons/green-learn.svg", alt="")
+                        .index-block__content
+                            .index-block__title Исследования
+                            .index-block__count 21
+                                span.index-block__count-green +23
+                    li.index-block__item
+                        img.index-block__img(src="images/icons/green-anketa.svg", alt="")
+                        .index-block__content
+                            .index-block__title Анкеты
+                            .index-block__count 9856
+                                span.index-block__count-green +355
+                    li.index-block__item
+                        img.index-block__img(src="images/icons/green-medic.svg", alt="")
+                        .index-block__content
+                            .index-block__title Врачи
+                            .index-block__count 22564
+                                span.index-block__count-green +48
+                    li.index-block__item
+                        img.index-block__img(src="images/icons/green-clients.svg", alt="")
+                        .index-block__content
+                            .index-block__title Заказчики
+                            .index-block__count 10
+
+            .section-content
+                h2.section-content__title.title Исследования 
+                p.section-content__subtitle <30 д. до завершения
+
+                .table.section-content__table
+                    ul.table-header__list
+                        li.table__row.table__row-checkbox
+                            input.checkbox(type="checkbox")
+                        li.table__row ID
+                        li.table__row.table__row-naming Наименование
+                        li.table__row Заказчик
+                        li.table__row Сроки
+                        li.table__row Врачи
+                        li.table__row Анкеты
+                        li.table__row Действия
+
+                    ul.table-rows__list
+                        li.table__row.table__row-checkbox
+                            input.checkbox(type="checkbox")
+                        li.table__row 15905
+                        li.table__row.table__row-naming
+                            .table__row-inner
+                                .table__row-title MULTISPECT
+                                .table__row-subtitle Множественная миелома
+                        li.table__row ООО 'Джонсон 
+                         br
+                         | & Джонсон'
+                        li.table__row.table__row-inner
+                            .table__row-subtitle 4 Мая 22
+                            .table__row-message.message-error 5 д. до завершения
+                        li.table__row 989 &nbsp;
+                            span из 1020
+                        li.table__row.table__row-inner
+                            p 6868 
+                                span из 9000
+                            .table__row-line
+                                .table__row-line--filled.orange(style="width:5rem;")
+                            p
+                                span 38 черн.
+                        li.table__row.table__row-actions
+                            img(src="images/icons/draft.svg", alt="" data-draft)
+                            img(src="images/icons/menu-dotted.svg", alt="" data-menu-dotted)
+                            img(src="images/icons/shevron-down.svg", alt="" data-list-dropdown)
+
+                    ul.table-rows__list
+                        li.table__row.table__row-checkbox
+                            input.checkbox(type="checkbox")
+                        li.table__row 15905
+                        li.table__row.table__row-naming
+                            .table__row-inner
+                                .table__row-title Опрос врачей, 2 этап
+                                .table__row-subtitle Офтальмология
+                        li.table__row Сентисс Рус ООО
+                        li.table__row.table__row-inner
+                            .table__row-subtitle 4 Мая 22
+                            .table__row-message.message-error 8 д. до завершения
+                        li.table__row 989 &nbsp;
+                            span из 1020
+                        li.table__row.table__row-inner
+                            p 6868 
+                                span из 9000
+                            .table__row-line
+                                .table__row-line--filled.green(style="width:10rem;")
+                            p
+                                span 38 черн.
+                        li.table__row.table__row-actions
+                            img(src="images/icons/draft.svg", alt="" data-draft)
+                            img(src="images/icons/menu-dotted.svg", alt="" data-menu-dotted)
+                            img(src="images/icons/shevron-down.svg", alt="" data-list-dropdown)
+                    
+                    ul.table-rows__list
+                        li.table__row.table__row-checkbox
+                            input.checkbox(type="checkbox")
+                        li.table__row 15905
+                        li.table__row.table__row-naming
+                            .table__row-inner
+                                .table__row-title Опрос Врачей, 1 этап
+                                .table__row-subtitle Офтальмология
+                        li.table__row Сентисс Рус ООО
+                        li.table__row.table__row-inner
+                            .table__row-subtitle 4 Мая 22
+                            .table__row-message.message-warning 25 д. до завершения
+                        li.table__row 989 &nbsp;
+                            span из 1020
+                        li.table__row.table__row-inner
+                            p 1 
+                                span из 580
+                            .table__row-line
+                                .table__row-line--filled.red(style="width:1rem;")
+                            p
+                                span 38 черн.
+                        li.table__row.table__row-actions
+                            img(src="images/icons/draft.svg", alt="" data-draft)
+                            img(src="images/icons/menu-dotted.svg", alt="" data-menu-dotted)
+                            img(src="images/icons/shevron-down.svg", alt="" data-list-dropdown)
+
+                    .table-footer
+                        .btn.btn-success.btn-rounded Все исследования
+            
+                        
+    include pug/includes/footer

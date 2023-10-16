@@ -1,0 +1,39 @@
+.breadcrumbs {
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+   
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: #828282;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 4rem;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url(../../images/icons/shevron-right.svg);
+                background-repeat: no-repeat;
+                width: 0.8rem;
+                height: 1.2rem;
+                right: -2.5rem;
+                top: 0.8rem;
+            }
+        }
+
+        &:last-child {
+            
+        }
+    }
+
+    &__link {
+
+    }
+}

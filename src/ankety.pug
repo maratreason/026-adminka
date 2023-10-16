@@ -1,0 +1,369 @@
+extends pug/base
+
+append content
+  .top
+    include pug/includes/sitebar
+    include pug/includes/header
+
+  main
+    .container
+      .section-content
+        h2.section-content__title.title Анкеты
+          span.section-content__title-nums 9856
+
+        .section-content__selects-list.selects-list
+          .search-input
+            img.search-input__btn(src="images/icons/ui/search-input.svg" alt="")
+            input(placeholder="Поиск по id")
+
+          .select(data-select)
+            .select__current
+              span.select__current-text Врачи
+              .btn-dropdown__icon
+                img(src="images/icons/ui/select-icon.svg"
+                  alt="select dropdown item"
+                  data-select-icon)
+            ul.select__list
+              li.select__item Врачи
+              li.select__item Анкеты
+              li.select__item Визиты
+
+          .select(data-select)
+            .select__current
+              span.select__current-text Исследования
+              .btn-dropdown__icon
+                img(src="images/icons/ui/select-icon.svg"
+                  alt="select dropdown item"
+                  data-select-icon)
+            ul.select__list
+              li.select__item Исследования
+              li.select__item Анкеты
+              li.select__item Визиты
+
+          input.input(type="date")
+
+          .selects-list__cheeps.cheeps
+            span.cheep.cheep-primary Черновики
+            span.cheep.cheep-primary Сегодня
+            span.cheep.cheep-primary Этот месяц
+
+        ul.section-content__sorting-list
+          li.section-content__sorting-item.is--active
+            .section-content__sorting-text Принято
+            .section-content__sorting-number 15
+          li.section-content__sorting-item
+            .section-content__sorting-text Черновики
+            .section-content__sorting-number 22
+          li.section-content__sorting-item
+            .section-content__sorting-text Доработать
+            .section-content__sorting-number 2
+          li.section-content__sorting-item
+            .section-content__sorting-text На проверке
+            .section-content__sorting-number 2
+          li.section-content__sorting-item
+            img.section-content__sorting-item-icon(src="images/icons/ui/trash.svg" alt="")
+            .section-content__sorting-text Корзина
+            .section-content__sorting-number 2
+
+
+        .table.section-content__table
+          ul.table-header__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row ID
+            li.table__row.table__row-naming Исследование
+            li.table__row Врач
+            li.table__row Код пациента
+            li.table__row Изменено
+            li.table__row Статус
+            li.table__row
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title MULTISPECT
+                  img.table__row-title-icon(src="images/icons/table/item-user.svg" alt="")
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+                .table__row-subtitle Офтальмология
+            li.table__row
+              .table__row-inner
+                .table__row-title Просекин И. Б.
+                .table__row-subtitle prosekin@mail.ru
+            li.table__row 23
+            li.table__row Сегодня в 12:44
+            li.table__row
+              .cheep.cheep-success
+                span.cheep-disc
+                span.cheep-text Принято
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title Опрос врачей, 2 этап
+                  img.table__row-title-icon(src="images/icons/table/item-square.svg" alt="")
+                .table__row-subtitle Офтальмология
+            li.table__row
+              .table__row-inner
+                .table__row-title Шатских С. Б.
+                .table__row-subtitle shatckih@gmail.com
+            li.table__row 231
+            li.table__row Сегодня в 10:09
+            li.table__row
+              .cheep.cheep-warning
+                span.cheep-disc
+                span.cheep-text Черновик
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title Лимфомиозот
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+            li.table__row
+              .table__row-inner
+                .table__row-title Просекин И. Б.
+                .table__row-subtitle prosekin@mail.ru
+            li.table__row 23
+            li.table__row Вчера в 23:34
+            li.table__row
+              .cheep.cheep-warning
+                span.cheep-disc
+                span.cheep-text Черновик
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title Клинические случаи
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+                .table__row-subtitle Проспекта
+            li.table__row
+              .table__row-inner
+                .table__row-title Шалаева В. С.
+                .table__row-subtitle shalaeva@yandex.ru
+            li.table__row 23
+            li.table__row Вчера в 18:27
+            li.table__row
+              .cheep.cheep-success
+                span.cheep-disc
+                span.cheep-text Принято
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title ПАРУС
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+                .table__row-subtitle Проспекта
+            li.table__row
+              .table__row-inner
+                .table__row-title Шалаева В. С.
+                .table__row-subtitle shalaeva@yandex.ru
+            li.table__row 23
+            li.table__row 15 май 22 в 21:43
+            li.table__row
+              .cheep.cheep-success
+                span.cheep-disc
+                span.cheep-text Принято
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title MULTISPECT
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+                .table__row-subtitle Офтальмология
+            li.table__row
+              .table__row-inner
+                .table__row-title Шалаева В. С.
+                .table__row-subtitle shalaeva@yandex.ru
+            li.table__row 23
+            li.table__row 15 май 22 в 21:43
+            li.table__row
+              .cheep.cheep-warning
+                span.cheep-disc
+                span.cheep-text Черновик
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title MULTISPECT
+                  img.table__row-title-icon(src="images/icons/table/item-user.svg" alt="")
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+                .table__row-subtitle Офтальмология
+            li.table__row
+              .table__row-inner
+                .table__row-title Шалаева В. С.
+                .table__row-subtitle shalaeva@yandex.ru
+            li.table__row 23
+            li.table__row 14 май 22 в 10:34
+            li.table__row
+              .cheep.cheep-warning
+                span.cheep-disc
+                span.cheep-text Черновик
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title MULTISPECT
+                  img.table__row-title-icon(src="images/icons/table/item-user.svg" alt="")
+                  img.table__row-title-icon(src="images/icons/table/item-square.svg" alt="")
+                .table__row-subtitle Офтальмология
+            li.table__row
+              .table__row-inner
+                .table__row-title Матар О.
+                .table__row-subtitle matar@gmail.com
+            li.table__row 23
+            li.table__row 13 май 22 в 23:55
+            li.table__row
+              .cheep.cheep-warning
+                span.cheep-disc
+                span.cheep-text Черновик
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title MULTISPECT
+                  img.table__row-title-icon(src="images/icons/table/item-user.svg" alt="")
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+                .table__row-subtitle Офтальмология
+            li.table__row
+              .table__row-inner
+                .table__row-title Матар О.
+                .table__row-subtitle matar@gmail.com
+            li.table__row 23
+            li.table__row 13 май 22 в 22:23
+            li.table__row
+              .cheep.cheep-success
+                span.cheep-disc
+                span.cheep-text Принято
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+          ul.table-rows__list
+            li.table__row.table__row-checkbox
+              input.checkbox(type="checkbox")
+            li.table__row 154795
+            li.table__row.table__row-naming
+              .table__row-inner
+                .table__row-title MULTISPECT
+                  img.table__row-title-icon(src="images/icons/table/item-user.svg" alt="")
+                  img.table__row-title-icon(src="images/icons/table/item-squares.svg" alt="")
+                .table__row-subtitle Офтальмология
+            li.table__row
+              .table__row-inner
+                .table__row-title Матар О.
+                .table__row-subtitle matar@gmail.com
+            li.table__row 23
+            li.table__row 10 май 22 в 12:05
+            li.table__row
+              .cheep.cheep-warning
+                span.cheep-disc
+                span.cheep-text Черновик
+            li.table__row.table__row-actions
+              img(src="images/icons/eye.svg" alt="" data-draft)
+              img(src="images/icons/menu-dotted.svg" alt="" data-menu-dotted)
+
+
+          .table-footer
+            .table-footer__panel
+              .select(data-select)
+                .select__current
+                  span.select__current-text Действия
+                  .btn-dropdown__icon
+                    img(src="images/icons/ui/select-icon.svg"
+                      alt="select dropdown item"
+                      data-select-icon)
+                ul.select__list
+                  li.select__item Открыть
+                  li.select__item Изменить
+                  li.select__item Удалить
+
+              .btn.btn-success.btn-rounded.btn-narrow Применить
+
+            .table-footer__panel
+              .table-footer__panel-label Показать
+              .select(data-select)
+                .select__current
+                  span.select__current-text 10
+                  .btn-dropdown__icon
+                    img(src="images/icons/ui/select-icon.svg"
+                      alt="select dropdown item"
+                      data-select-icon)
+                ul.select__list
+                  li.select__item 5
+                  li.select__item 10
+                  li.select__item 20
+                  li.select__item 50
+              .table-footer__panel-label строк
+
+            .table-footer__panel
+              .pagination
+                ul.pagination__list
+                  li.pagination__item.pagination__item-arrow
+                    a.pagination__link(href="#")
+                      img.pagination__icon(src="images/icons/ui/pag-left.svg" alt="")
+                  li.pagination__item
+                    a.pagination__link.is--active(href="#") 1
+                  li.pagination__item
+                    a.pagination__link(href="#") 2
+                  li.pagination__item
+                    a.pagination__link(href="#") 3
+                  li.pagination__item
+                    a.pagination__link(href="#") ...
+                  li.pagination__item
+                    a.pagination__link(href="#") 1337
+                  li.pagination__item.pagination__item-arrow
+                    a.pagination__link(href="#")
+                      img.pagination__icon(src="images/icons/ui/pag-right.svg" alt="")
+
+
+  include pug/includes/footer
